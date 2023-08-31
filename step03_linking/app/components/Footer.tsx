@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <div>this is Footer</div>
+    <div className='bg-red-100'>this is Footer</div>
   )
 }
