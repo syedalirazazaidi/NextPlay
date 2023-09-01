@@ -10,9 +10,7 @@ interface USERTYPE {
   updatedAt: string;
 }
 async function getData() {
-  const res = await fetch(
-    "https://api.escuelajs.co/api/v1/users"
-  );
+  const res = await fetch("https://api.escuelajs.co/api/v1/users");
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
@@ -25,10 +23,13 @@ export default async function Home() {
   const users = await getData();
   const renderData = users
     .slice(0, 6)
-    .map(({ name, email, avatar, creationAt,id }: USERTYPE) => {
+    .map(({ name, email, avatar, creationAt, id }: USERTYPE) => {
       return (
         <div>
-          <div key={id} className="flex text-center  justify-center align-baseline">
+          <div
+            key={id}
+            className="flex text-center  justify-center align-baseline"
+          >
             <Image
               className="rounded-lg"
               src={avatar}

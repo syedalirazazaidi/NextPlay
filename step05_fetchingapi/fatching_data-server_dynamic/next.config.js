@@ -1,4 +1,13 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  images: {
+    domains: [
+      "picsum.photos",
+      "tmpfiles.org",
+      "img.freepik.com",
+      "api.lorem.space",
+    ],
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
