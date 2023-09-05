@@ -27,9 +27,9 @@ export default async function Home() {
     .slice(0, 3)
     .map(({ name, email, avatar, creationAt, id }: USERTYPE) => {
       return (
-        <div>
+        <div  key={id}>
           <div
-            key={id}
+          
             className="flex text-center  justify-center align-baseline"
           >
             <Image
