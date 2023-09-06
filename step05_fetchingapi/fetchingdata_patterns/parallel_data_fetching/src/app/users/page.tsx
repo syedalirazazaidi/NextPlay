@@ -8,7 +8,7 @@ interface UserTypes {
 
 export default async function Users() {
   const users = await getAllUsers();
-  const renderUsers = users.slice(0, 6).map(({ name, id }: UserTypes) => {
+  const renderUsers = users.slice(0, 5).map(({ name, id }: UserTypes) => {
     return (
       <div key={id}>
         <Link href={`/users/${id}`}>{name}</Link>
